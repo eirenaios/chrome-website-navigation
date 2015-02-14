@@ -1,0 +1,121 @@
+/* 
+    Created on : 14 Feb, 2015, 3:51:07 PM
+    Author     : Designer-PC
+    Navigation Menu of Google chrome website.
+*/
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    max-width: 928px;
+    margin: 0 auto;
+}
+
+nav ul.menu{
+    margin: 0;
+    padding: 0;
+    float: right;
+    z-index: 10;
+}
+
+nav ul.menu li{
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    background: #fff;
+    margin-left: 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+nav ul.menu li:hover:before{
+    position: absolute;
+    z-index: -1;
+    right: 3px;
+    top: 5px;
+    content: '';
+    height: 74%;
+    box-shadow: 3px 2px 5px 2px #CBCBCB;
+    transform: rotate(8deg);
+}
+
+
+nav ul.menu > li a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    font-size: 13px;
+    color: #999;
+    font-weight: 600;
+
+}
+
+nav ul.menu li:after{
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    background: url(../image/chevron.png);
+    background-repeat: no-repeat;
+    background-size: 9px;
+    height: 5px;
+    width: 10px;
+}
+
+nav ul.menu li:hover{
+    color: #333;
+    background: #f7f7f7;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+
+/*Submenu*/
+
+nav ul.submenu{
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    right: 0;
+    background: #f7f7f7;
+    overflow: hidden;
+    padding: 0;
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 0.6s ease;
+}
+
+nav ul li:hover > ul.submenu{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+nav ul ul.submenu li{
+    width: 100%;
+    margin-left: 0;
+    border-bottom: 1px solid #e8e8e8;
+    background: #f7f7f7;
+
+}
+
+nav ul.submenu li:hover {
+    background: #e5e5e5;
+    background: -moz-linear-gradient(205deg,rgba(229,229,229,.7) 0,rgba(233,233,233,.7) 20%,rgba(244,244,244,.7) 100%);
+    background: -webkit-linear-gradient(205deg,rgba(229,229,229,.7) 0,rgba(233,233,233,.7) 20%,rgba(244,244,244,.7) 100%);
+    background: linear-gradient(205deg,rgba(229,229,229,.7) 0,rgba(233,233,233,.7) 20%,rgba(244,244,244,.7) 100%);   
+}
+nav ul.submenu li:after {
+    content: '';
+    position: absolute;
+    background: transparent; 
+}
+
+nav ul ul.submenu a{
+    /*padding: 0;*/
+}
+
+
+
